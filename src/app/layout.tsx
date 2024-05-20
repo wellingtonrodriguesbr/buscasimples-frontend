@@ -5,6 +5,7 @@ import { ReactQueryProvider } from "@/providers/react-query-provider";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
+import { MenuMobile } from "@/components/menu-mobile";
 
 const display = Urbanist({ subsets: ["latin"], variable: "--font-display" });
 const sans = Inter({
@@ -33,7 +34,10 @@ export default function RootLayout({
           display.variable
         )}
       >
-        <ReactQueryProvider>{children}</ReactQueryProvider>
+        <ReactQueryProvider>
+          {children}
+          <MenuMobile />
+        </ReactQueryProvider>
       </body>
     </html>
   );
