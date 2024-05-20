@@ -21,7 +21,9 @@ export function UserLocationDialog() {
       </DialogTrigger>
       <DialogContent className="max-w-[350px] md:max-w-[600px] rounded-md">
         <DialogHeader>
-          <DialogTitle>Adicionar sua localização</DialogTitle>
+          <DialogTitle className="text-left text-2xl">
+            Adicionar sua localização
+          </DialogTitle>
         </DialogHeader>
         <DialogFooter>
           <Button type="submit" className="w-full">

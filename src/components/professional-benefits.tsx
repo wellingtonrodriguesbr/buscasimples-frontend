@@ -21,7 +21,7 @@ export function ProfessionalBenefits() {
         <h2 className="text-2xl md:text-3xl font-semibold">
           O que está esperando para aumentar seus ganhos?
         </h2>
-        <p className="text-xs md:text-sm max-w-md text-app-gray-600">
+        <p className="text-sm max-w-md text-app-gray-600">
           O boca a boca tem seu valor, mas aqui você não se limita, muitos
           clientes precisam do seu trabalho e não te conhecem. Torne-se um
           profissa do Busca Simples.

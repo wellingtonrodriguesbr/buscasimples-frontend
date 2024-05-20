@@ -16,7 +16,7 @@ export function Faq() {
           <h3 className="text-2xl md:text-3xl font-semibold">
             Dúvidas frequentes
           </h3>
-          <p className="text-xs md:text-sm text-app-gray-600 max-w-md">
+          <p className="text-sm text-app-gray-600 max-w-md">
             Se ficou com alguma dúvida, entre em contato através do nosso e-mail
             ou Whatsapp:
           </p>

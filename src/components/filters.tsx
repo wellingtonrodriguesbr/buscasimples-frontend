@@ -22,8 +22,8 @@ export function Filters() {
       </DialogTrigger>
       <DialogContent className="max-w-[350px] md:max-w-[600px] rounded-md">
         <DialogHeader>
-          <DialogTitle>Filtros</DialogTitle>
-          <DialogDescription>
+          <DialogTitle className="text-left text-2xl">Filtros</DialogTitle>
+          <DialogDescription className="text-left">
             Adicione filtros e encontre com mais facilidade o que você está
             buscando
           </DialogDescription>

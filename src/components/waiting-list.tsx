@@ -21,7 +21,9 @@ export function WaitingList() {
       </DialogTrigger>
       <DialogContent className="max-w-[350px] md:max-w-[600px] rounded-md">
         <DialogHeader>
-          <DialogTitle>Entrar na lista de espera</DialogTitle>
+          <DialogTitle className="text-left text-2xl">
+            Entrar na lista de espera
+          </DialogTitle>
         </DialogHeader>
         <DialogFooter>
           <Button type="submit" className="w-full">
