@@ -30,9 +30,9 @@ export function Footer() {
           <Image
             src="/footer-img.png"
             alt="Homem segurando um celular"
-            className="w-[500px] md:w-[800px] absolute right-0 bottom-0"
-            width={800}
-            height={800}
+            className="absolute left-1/2 -translate-x-1/2 bottom-0"
+            width={300}
+            height={300}
             quality={100}
           />
         </div>
@@ -55,11 +55,6 @@ export function Footer() {
         <div className="flex flex-col gap-4 md:gap-2">
           <span className="text-xs text-app-gray-600">
             © Copyright 2024 - Busca Simples - Todos os direitos reservados
-          </span>
-
-          <span className="text-xs text-app-gray-600">
-            CNPJ 00.000.000/0000-00 / Rua Logo Ali, n° 2202, Jd. América, São
-            Paulo/SP - CEP 18000-000
           </span>
         </div>
 

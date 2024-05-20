@@ -19,7 +19,7 @@ export function UserLocationDialog() {
           Adicionar localização
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="max-w-[350px] md:max-w-[600px] rounded-md">
         <DialogHeader>
           <DialogTitle>Adicionar sua localização</DialogTitle>
         </DialogHeader>

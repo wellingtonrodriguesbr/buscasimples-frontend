@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
@@ -11,14 +12,16 @@ export function HeaderNav() {
   return (
     <nav className="w-full max-w-screen-2xl mx-auto px-4 flex items-center justify-between">
       <div className="flex items-center gap-24">
-        <Image
-          src="/logo.svg"
-          alt="Busca Simples"
-          className="w-28"
-          width={144}
-          height={144}
-          quality={100}
-        />
+        <Link href="/">
+          <Image
+            src="/logo.svg"
+            alt="Busca Simples"
+            className="w-28"
+            width={144}
+            height={144}
+            quality={100}
+          />
+        </Link>
         <NavMenu />
       </div>
 

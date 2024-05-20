@@ -44,27 +44,33 @@ export function Faq() {
 
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger>Como irá funcionar?</AccordionTrigger>
+            <AccordionTrigger className="underline-0 hover:no-underline">
+              Como irá funcionar?
+            </AccordionTrigger>
             <AccordionContent>
               Yes. It adheres to the WAI-ARIA design pattern.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>É uma assinatura?</AccordionTrigger>
+            <AccordionTrigger className="underline-0 hover:no-underline">
+              É uma assinatura?
+            </AccordionTrigger>
             <AccordionContent>
               Yes. It comes with default styles that matches the other
               components&apos; aesthetic.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger>Quais benefícios eu terei?</AccordionTrigger>
+            <AccordionTrigger className="no-underline hover:no-underline">
+              Quais benefícios eu terei?
+            </AccordionTrigger>
             <AccordionContent>
               Yes. It&apos;s animated by default, but you can disable it if you
               prefer.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
-            <AccordionTrigger>
+            <AccordionTrigger className="underline-0 hover:no-underline">
               Quem poderá entrar como profissa?
             </AccordionTrigger>
             <AccordionContent>
@@ -73,7 +79,9 @@ export function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-5">
-            <AccordionTrigger>O que é um(a) profissa?</AccordionTrigger>
+            <AccordionTrigger className="underline-0 hover:no-underline">
+              O que é um(a) profissa?
+            </AccordionTrigger>
             <AccordionContent>
               Yes. It&apos;s animated by default, but you can disable it if you
               prefer.

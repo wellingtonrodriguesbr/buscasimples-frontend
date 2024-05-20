@@ -18,7 +18,7 @@ export function NavMenu() {
     <NavigationMenu className="hidden xl:block">
       <NavigationMenuList className="text-app-gray-700">
         <NavigationMenuItem>
-          <Link href="/inicio" legacyBehavior passHref>
+          <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink
               data-active={path === "/"}
               className={navigationMenuTriggerStyle()}

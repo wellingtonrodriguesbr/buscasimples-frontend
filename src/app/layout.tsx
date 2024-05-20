@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Urbanist } from "next/font/google";
+
+import { ReactQueryProvider } from "@/providers/react-query-provider";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
@@ -31,7 +33,7 @@ export default function RootLayout({
           display.variable
         )}
       >
-        {children}
+        <ReactQueryProvider>{children}</ReactQueryProvider>
       </body>
     </html>
   );

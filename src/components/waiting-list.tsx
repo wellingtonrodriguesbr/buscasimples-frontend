@@ -19,7 +19,7 @@ export function WaitingList() {
           Entrar na lista de espera
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="max-w-[350px] md:max-w-[600px] rounded-md">
         <DialogHeader>
           <DialogTitle>Entrar na lista de espera</DialogTitle>
         </DialogHeader>

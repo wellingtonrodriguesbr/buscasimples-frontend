@@ -15,7 +15,8 @@ export function Hero() {
         />
 
         <h1 className="text-4xl xl:text-5xl leading-tight xl:leading-tight font-semibold">
-          Simplificamos a conexão entre quem demanda com quem resolve.
+          Conectando clientes e profissionais de maneira simples, rápida e
+          eficaz.
         </h1>
         <p className="text-sm md:text-base mt-6 text-app-gray-600">
           Conheça a plataforma que revoluciona a maneira como profissionais e
