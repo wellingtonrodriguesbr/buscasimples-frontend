@@ -15,14 +15,13 @@ export function Hero() {
         />
 
         <h1 className="text-4xl xl:text-5xl leading-tight xl:leading-tight font-semibold">
-          Conectando clientes e profissionais de maneira simples, rápida e
+          Conectando clientes e profissionais de um jeito simples, rápido e
           eficaz.
         </h1>
         <p className="text-sm md:text-base mt-6 text-app-gray-600">
-          Conheça a plataforma que revoluciona a maneira como profissionais e
-          clientes se conectam. Encontre especialistas em diversas áreas prontos
-          para te atender. Encontre clientes que estão procurando seus serviços.
-          Simples assim!
+          Simplificamos a maneira como profissionais e clientes se conectam.
+          Encontre especialistas em diversas áreas prontos para te atender.
+          Encontre clientes que estão procurando seus serviços. Simples assim!
         </p>
 
         <div className="flex flex-col md:flex-row items-center gap-3 mt-8">
