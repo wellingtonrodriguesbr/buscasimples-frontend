@@ -33,7 +33,7 @@ export function MenuMobile() {
         href="https://api.whatsapp.com/send?phone=+5511950537096&text=Olá,%20quero%20tirar%20algumas%20dúvidas,%20pode%20me%20ajudar?"
         className="flex flex-col gap-1 items-center text-xs font-medium font-display text-app-gray-500 data-[active=true]:text-app-gray-700 group transition-colors"
       >
-        <WhatsappIcon className="size-5 fill-app-gray-500 group-data-[active=true]:fill-app-blue-400 transition-colors" />
+        <WhatsappIcon className="size-4 fill-app-gray-500 group-data-[active=true]:fill-app-blue-400 transition-colors" />
         Dúvidas
       </Link>
     </section>

@@ -18,9 +18,9 @@ export function ProfessionalBenefits() {
   return (
     <section className="w-full max-w-screen-xl px-4 mx-auto mt-16 md:mt-36">
       <div className="flex flex-col md:flex-row items-start gap-6 justify-between">
-        <h2 className="text-2xl md:text-3xl font-semibold">
-          O que está esperando para aumentar seus ganhos?
-        </h2>
+        <h3 className="text-2xl md:text-3xl font-medium max-w-xl leading-tight md:leading-tight">
+          Veja ao que você terá acesso sendo um Profissa na nossa plataforma
+        </h3>
         <p className="text-sm max-w-md text-app-gray-600">
           O boca a boca tem seu valor, mas aqui você não se limita, muitos
           clientes precisam do seu trabalho e não te conhecem. Torne-se um

@@ -10,9 +10,7 @@ export function Hero() {
   return (
     <section className="w-full max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 place-content-center gap-12 mt-12 md:mt-72">
       <div className="mt-0 md:-mt-32">
-        <TypeWriter
-          words={["Buscou", "Achou", "Contratou", "Simples assim."]}
-        />
+        <TypeWriter words={["Buscou, achou, contratou. Simples assim!"]} />
 
         <h1 className="text-4xl xl:text-5xl leading-tight xl:leading-tight font-semibold">
           Conectando clientes e profissionais de um jeito simples, rápido e

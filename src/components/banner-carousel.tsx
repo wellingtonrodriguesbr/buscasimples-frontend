@@ -34,6 +34,9 @@ export function BannerCarousel() {
 
   return (
     <div className="w-full max-w-screen-xl mx-auto px-4 mt-24">
+      <h2 className="font-medium text-2xl md:text-3xl mb-6">
+        O que você está buscando hoje?
+      </h2>
       <Carousel
         plugins={[
           Autoplay({

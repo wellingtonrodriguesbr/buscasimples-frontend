@@ -13,9 +13,9 @@ export function Faq() {
     <section className="w-full max-w-screen-xl px-4 mx-auto pt-12 md:pt-36">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
         <div className="flex flex-col gap-3">
-          <h3 className="text-2xl md:text-3xl font-semibold">
+          <h4 className="text-2xl md:text-3xl font-semibold">
             Dúvidas frequentes
-          </h3>
+          </h4>
           <p className="text-sm text-app-gray-600 max-w-md">
             Se ficou com alguma dúvida, entre em contato através do nosso e-mail
             ou Whatsapp:
@@ -51,6 +51,15 @@ export function Faq() {
               Yes. It adheres to the WAI-ARIA design pattern.
             </AccordionContent>
           </AccordionItem>
+          <AccordionItem value="item-5">
+            <AccordionTrigger className="underline-0 hover:no-underline">
+              O que é um(a) profissa?
+            </AccordionTrigger>
+            <AccordionContent>
+              Yes. It&apos;s animated by default, but you can disable it if you
+              prefer.
+            </AccordionContent>
+          </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger className="underline-0 hover:no-underline">
               É uma assinatura?
@@ -58,15 +67,6 @@ export function Faq() {
             <AccordionContent>
               Yes. It comes with default styles that matches the other
               components&apos; aesthetic.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger className="no-underline hover:no-underline">
-              Quais benefícios eu terei?
-            </AccordionTrigger>
-            <AccordionContent>
-              Yes. It&apos;s animated by default, but you can disable it if you
-              prefer.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
@@ -78,9 +78,18 @@ export function Faq() {
               prefer.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-5">
-            <AccordionTrigger className="underline-0 hover:no-underline">
-              O que é um(a) profissa?
+          <AccordionItem value="item-3">
+            <AccordionTrigger className="text-left mr-2 no-underline hover:no-underline">
+              Quais benefícios eu terei como um profissa?
+            </AccordionTrigger>
+            <AccordionContent>
+              Yes. It&apos;s animated by default, but you can disable it if you
+              prefer.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-6">
+            <AccordionTrigger className="text-left mr-2 underline-0 hover:no-underline">
+              Quero contratar um profissa, preciso pagar alguma coisa?
             </AccordionTrigger>
             <AccordionContent>
               Yes. It&apos;s animated by default, but you can disable it if you

@@ -7,7 +7,7 @@ import { FooterSocialMedia } from "./footer-social-media";
 
 export function Footer() {
   return (
-    <footer className="w-full max-w-screen-xl px-4 mx-auto mt-36 pb-24 xl:pb-10">
+    <footer className="w-full max-w-screen-xl px-4 mx-auto mt-16 md:mt-36 pb-24 xl:pb-10">
       <div className="flex flex-col md:flex-row items-start justify-between gap-16 py-4 md:pb-1 border-t pt-16 md:pt-20">
         <div className="grid grid-cols-2 xl:grid-cols-3 w-full gap-12 -mt-8">
           <div>
