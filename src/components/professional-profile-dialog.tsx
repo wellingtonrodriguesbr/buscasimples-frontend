@@ -10,33 +10,28 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
-import { RequestServiceForm } from "./request-service-form";
 
-interface RequestServiceDialogProps {
-  workerName?: string;
-}
-
-export function RequestServiceDialog({
-  workerName,
-}: RequestServiceDialogProps) {
+export function ProfessionalProfileDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="justify-between w-full font-medium text-xs">
-          Contratar {workerName ? workerName : "este profissional"}{" "}
-          <ChevronRight className="w-4 h-4" />
+        <Button
+          size="sm"
+          className="bg-transparent hover:bg-transparent p-0 flex items-center text-app-blue-400 hover:text-app-blue-500 text-xs group"
+        >
+          Ver perfil completo
+          <ChevronRight className="text-3 h-3 group-hover:translate-x-0.5 transition-transform" />
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-[350px] md:max-w-lg rounded-md">
         <DialogHeader className="items-start">
           <DialogTitle className="text-2xl text-app-black">
-            Nova solicitação
+            Perfil do profissa
           </DialogTitle>
           <DialogDescription className="text-left">
-            Preencha as informações abaixo
+            Aqui está com mais detalhes as informações deste profissa
           </DialogDescription>
         </DialogHeader>
-        <RequestServiceForm />
       </DialogContent>
     </Dialog>
   );

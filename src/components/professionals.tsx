@@ -11,7 +11,7 @@ export function Professionals() {
           </h1>
           <p className="text-sm md:text-base mt-4 text-app-gray-600">
             Busque o profissional que melhor se encaixe na sua necessidade,
-            adicione filtros para facilitar sua busca! :)
+            adicione filtros para facilitar sua busca!
           </p>
         </div>
         <Filters />

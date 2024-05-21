@@ -1,12 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
-import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
-import { UserLocationDialog } from "./user-location-dialog";
-import { ChevronRight, User } from "lucide-react";
 import { WaitingList } from "./waiting-list";
 import { NavMenu } from "./nav-menu";
+import { Loader2 } from "lucide-react";
+import { Button } from "./ui/button";
+
+const UserLocation = dynamic(() => import("./user-location-dialog"), {
+  loading: () => {
+    return (
+      <Button variant="secondary" className="gap-2">
+        <Loader2 className="size-4 animate-spin" />
+        Carregando...
+      </Button>
+    );
+  },
+  ssr: false,
+});
 
 export function HeaderNav() {
   return (
@@ -26,19 +38,11 @@ export function HeaderNav() {
       </div>
 
       <div className="flex items-center gap-3">
-        <UserLocationDialog />
+        <UserLocation />
         <Separator className="hidden md:block w-px h-6" />
         <div className="hidden md:block">
           <WaitingList />
         </div>
-        {/* <Button className="gap-2" variant="ghost">
-          <User className="size-4" />
-          Entrar
-        </Button>
-        <Button className="gap-2">
-          Criar uma conta
-          <ChevronRight className="size-4" />
-        </Button> */}
       </div>
     </nav>
   );

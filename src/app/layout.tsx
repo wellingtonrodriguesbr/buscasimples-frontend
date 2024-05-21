@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { Inter, Urbanist } from "next/font/google";
 
 import { ReactQueryProvider } from "@/providers/react-query-provider";
+import { MenuMobile } from "@/components/menu-mobile";
+import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
-import { MenuMobile } from "@/components/menu-mobile";
 
 const display = Urbanist({ subsets: ["latin"], variable: "--font-display" });
 const sans = Inter({
@@ -37,6 +38,7 @@ export default function RootLayout({
         <ReactQueryProvider>
           {children}
           <MenuMobile />
+          <Toaster richColors position="bottom-center" />
         </ReactQueryProvider>
       </body>
     </html>

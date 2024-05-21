@@ -1,15 +1,13 @@
-import Link from "next/link";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import { ChevronRight } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { RequestServiceDialog } from "./request-service-dialog";
+import { ProfessionalProfileDialog } from "./professional-profile-dialog";
+import { ProfessionalInformation } from "./professional-information";
 
 export function ProfessionalCard() {
   return (
@@ -33,22 +31,13 @@ export function ProfessionalCard() {
             Desenvolvedor de software
           </CardDescription>
 
-          <Link
-            href="/profissional/wellingtonrodriguesbr"
-            className="flex items-center text-app-blue-400 hover:text-app-blue-500 text-xs mt-2 group"
-          >
-            Ver perfil completo
-            <ChevronRight className="text-3 h-3 group-hover:translate-x-0.5 transition-transform" />
-          </Link>
+          <ProfessionalProfileDialog />
         </div>
       </CardHeader>
 
       <CardContent className="flex flex-col gap-4">
-        {/* <WorkerCardInformation /> */}
+        <ProfessionalInformation />
       </CardContent>
-      <CardFooter>
-        <RequestServiceDialog />
-      </CardFooter>
     </Card>
   );
 }
