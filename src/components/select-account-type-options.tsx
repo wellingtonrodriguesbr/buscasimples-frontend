@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Bolt, Check, ChevronRight, Search } from "lucide-react";
+import { Check, ChevronRight, Handshake, Search } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function SelectAccountTypeOptions() {
@@ -45,7 +45,7 @@ export function SelectAccountTypeOptions() {
           className="h-full justify-start gap-4 py-3 border border-transparent hover:border-app-gray-200 data-[select=true]:border-app-gray-200"
         >
           <div className="flex justify-center items-center size-10 rounded-sm bg-app-blue-500">
-            <Bolt className="text-white" />
+            <Handshake className="text-white" />
           </div>
           <div className="flex flex-col items-start gap-1">
             <span className="text-base leading-none">Quero ser contratado</span>
