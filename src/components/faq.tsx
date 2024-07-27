@@ -34,7 +34,7 @@ export function Faq() {
 
             <Link
               href="https://api.whatsapp.com/send?phone=+5511950537096&text=Olá,%20quero%20tirar%20algumas%20dúvidas,%20pode%20me%20ajudar?"
-              className="underline text-sm text-app-gray-700 font-medium flex items-center gap-2 group"
+              className="underline text-sm text-app-green-700 font-medium flex items-center gap-2 group"
             >
               Chamar no Whatsapp
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
