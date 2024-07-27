@@ -42,7 +42,7 @@ export function DrawerMenuMobile() {
             >
               Criar conta gratuitamente
             </Link>
-            <ArrowUpRight className="absolute top-2 right-2 size-4" />
+            <ArrowUpRight className="absolute top-2 right-2 size-4 text-app-blue-400" />
           </li>
           <li className="relative p-2 rounded-lg bg-app-gray-100">
             <Link
@@ -51,7 +51,7 @@ export function DrawerMenuMobile() {
             >
               Acessar minha conta
             </Link>
-            <ArrowUpRight className="absolute top-2 right-2 size-4" />
+            <ArrowUpRight className="absolute top-2 right-2 size-4 text-app-blue-400" />
           </li>
           <li className="relative p-2 rounded-lg bg-app-gray-100">
             <Link
@@ -60,7 +60,7 @@ export function DrawerMenuMobile() {
             >
               Tirar dúvidas
             </Link>
-            <ArrowUpRight className="absolute top-2 right-2 size-4" />
+            <ArrowUpRight className="absolute top-2 right-2 size-4 text-app-blue-400" />
           </li>
           <li className="relative p-2 rounded-lg bg-app-gray-100">
             <Link
@@ -69,7 +69,7 @@ export function DrawerMenuMobile() {
             >
               Dar feedback
             </Link>
-            <ArrowUpRight className="absolute top-2 right-2 size-4" />
+            <ArrowUpRight className="absolute top-2 right-2 size-4 text-app-blue-400" />
           </li>
         </ul>
       </DrawerContent>
