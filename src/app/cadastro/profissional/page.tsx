@@ -1,9 +1,9 @@
-import { Register } from "@/components/register";
+import { ProfessionalRegister } from "@/components/professional-register";
 
 export default function ProfessionalRegisterPage() {
   return (
     <main>
-      <Register />
+      <ProfessionalRegister />
     </main>
   );
 }

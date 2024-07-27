@@ -9,8 +9,8 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <section className="h-screen w-full grid grid-cols-[456px_auto]">
-      <article className="h-full flex flex-col bg-white p-12">
+    <section className="h-screen w-full grid grid-cols-1 md:grid-cols-[456px_auto]">
+      <article className="h-full flex flex-col bg-white py-8 px-4 md:p-12">
         <header className="mb-12">
           <Link href="/">
             <Image
@@ -24,14 +24,16 @@ export default function AuthLayout({
         <h1 className="font-semibold text-2xl">Faça seu cadastro é simples.</h1>
         {children}
 
-        <footer className="flex flex-1 items-end justify-between">
-          <FooterSocialMedia />
-          <span className="text-app-gray-500 text-xs">
-            © Busca Simples 2024
-          </span>
+        <footer className="flex flex-1 items-end mt-12">
+          <div className="w-full flex items-center justify-between">
+            <FooterSocialMedia />
+            <span className="text-app-gray-500 text-xs">
+              © Busca Simples 2024
+            </span>
+          </div>
         </footer>
       </article>
-      <div className="h-full bg-app-gray-200"></div>
+      <div className="hidden md:block h-full bg-app-gray-200"></div>
     </section>
   );
 }

@@ -3,11 +3,11 @@ import Link from "next/link";
 import { RegisterForm } from "./register-form";
 import { Separator } from "./ui/separator";
 
-export function Register() {
+export function ProfessionalRegister() {
   return (
     <div className="flex flex-col gap-4 mt-6">
       <h1 className="font-medium">Dados de cadastro</h1>
-      <RegisterForm />
+      <RegisterForm submitButtonText="Avançar" />
       <p className="text-center text-app-gray-500 text-sm mt-5">
         Ao criar uma conta, você concorda com os nossos{" "}
         <Link href="" className="underline">

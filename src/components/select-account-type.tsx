@@ -10,7 +10,7 @@ export function SelectAccountType() {
       <Separator className="w-full h-px bg-app-gray-200 mt-5 mb-6" />
       <p className="text-center text-app-gray-500">
         Já tem uma conta?{" "}
-        <Link href="/entrar" className="text-app-blue-400">
+        <Link href="/entrar" className="text-app-blue-400 hover:underline">
           Entre agora
         </Link>
       </p>

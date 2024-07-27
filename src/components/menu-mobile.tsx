@@ -10,7 +10,10 @@ export function MenuMobile() {
   const path = usePathname();
 
   return (
-    <section className="flex md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white border-t items-center justify-between px-8 z-50">
+    <section
+      data-hidden={path.includes("/cadastro")}
+      className="flex md:hidden data-[hidden=true]:hidden fixed bottom-0 left-0 right-0 h-16 bg-white border-t items-center justify-between px-8 z-50"
+    >
       <Link
         data-active={path === "/"}
         href="/"
