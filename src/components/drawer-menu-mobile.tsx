@@ -32,7 +32,7 @@ export function DrawerMenuMobile() {
         <DrawerTitle>Menu de opções</DrawerTitle>
         <DrawerDescription></DrawerDescription>
       </DrawerHeader>
-      <DrawerContent className="h-[40vh] px-4">
+      <DrawerContent className="h-[45vh] px-4">
         <h3 className="mt-8 text-lg text-center">Como podemos te ajudar?</h3>
         <ul className="grid grid-cols-2 gap-1 mt-4">
           <li className="relative p-2 rounded-lg bg-app-gray-100">
