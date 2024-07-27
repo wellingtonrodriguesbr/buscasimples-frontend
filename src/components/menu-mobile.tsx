@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Home, Search } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { WhatsappIcon } from "@/components/icons/whatsapp";
+import { DrawerMenuMobile } from "./drawer-menu-mobile";
 
 export function MenuMobile() {
   const path = usePathname();
@@ -39,6 +40,7 @@ export function MenuMobile() {
         <WhatsappIcon className="size-4 fill-app-gray-500 group-data-[active=true]:fill-app-blue-400 transition-colors" />
         Dúvidas
       </Link>
+      <DrawerMenuMobile />
     </section>
   );
 }

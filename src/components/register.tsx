@@ -11,7 +11,7 @@ export function Register() {
       <p className="text-center text-app-gray-500 text-sm mt-5">
         Ao criar uma conta, você concorda com os nossos{" "}
         <Link href="" className="underline">
-          Termos de uso
+          Termos e condições de uso
         </Link>
       </p>
       <Separator className="w-full h-px bg-app-gray-200 mt-5 mb-6" />

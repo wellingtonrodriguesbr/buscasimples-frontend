@@ -55,7 +55,7 @@ export default function UserLocationDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button type="button" className="gap-2" variant="secondary">
+        <Button type="button" className="gap-2" size="sm" variant="ghost">
           <MapPin className="size-4" />
           {userLocation
             ? `${userLocation?.city}-${userLocation?.state}`
@@ -74,7 +74,7 @@ export default function UserLocationDialog() {
         </DialogHeader>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
               control={form.control}
               name="zipCode"

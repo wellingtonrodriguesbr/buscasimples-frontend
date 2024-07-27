@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { TypeWriter } from "./typewriter";
 import { WhatsappIcon } from "./icons/whatsapp";
-import { WaitingList } from "./waiting-list";
 
 export function Hero() {
   return (
@@ -23,7 +22,11 @@ export function Hero() {
         </p>
 
         <div className="flex flex-col md:flex-row items-center gap-3 mt-8">
-          <WaitingList />
+          <Button className="w-full" asChild>
+            <Link href="/cadastro/tipo-de-conta">
+              Crie uma conta gratuitamente
+            </Link>
+          </Button>
           <Button variant="secondary" className="w-full md:w-fit" asChild>
             <Link
               href="https://api.whatsapp.com/send?phone=+5511950537096&text=Olá,%20quero%20tirar%20algumas%20dúvidas,%20pode%20me%20ajudar?"

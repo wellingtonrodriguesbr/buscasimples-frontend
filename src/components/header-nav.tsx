@@ -3,7 +3,6 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 
 import { Separator } from "./ui/separator";
-import { WaitingList } from "./waiting-list";
 import { NavMenu } from "./nav-menu";
 import { Loader2 } from "lucide-react";
 import { Button } from "./ui/button";
@@ -40,8 +39,15 @@ export function HeaderNav() {
       <div className="flex items-center gap-3">
         <UserLocation />
         <Separator className="hidden md:block w-px h-6" />
-        <div className="hidden md:block">
-          <WaitingList />
+        <div className="hidden md:flex items-center gap-4">
+          <Button variant="link" asChild>
+            <Link href="/entrar">Entrar</Link>
+          </Button>
+          <Button size="sm" asChild>
+            <Link href="/cadastro/tipo-de-conta">
+              Crie uma conta gratuitamente
+            </Link>
+          </Button>
         </div>
       </div>
     </nav>
