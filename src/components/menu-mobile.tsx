@@ -12,7 +12,7 @@ export function MenuMobile() {
 
   return (
     <section
-      data-hidden={path.includes("/cadastro")}
+      data-hidden={path.includes("/cadastro") || path.includes("/entrar")}
       className="flex md:hidden data-[hidden=true]:hidden fixed bottom-0 left-0 right-0 h-16 bg-white border-t items-center justify-between px-8 z-50"
     >
       <Link
