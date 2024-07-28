@@ -1,13 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "./ui/button";
 import { TypeWriter } from "./typewriter";
 import { WhatsappIcon } from "./icons/whatsapp";
+import { useUserAuthenticate } from "@/hooks/use-user-authenticate";
 
 export function Hero() {
+  const { authenticate } = useUserAuthenticate();
+
   return (
-    <section className="w-full max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 place-content-center gap-12 mt-12 md:mt-72">
+    <section
+      data-authenticate={authenticate}
+      className="w-full max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 place-content-center gap-12 mt-12 md:mt-48 xl:mt-72 data-[authenticate=true]:hidden"
+    >
       <div className="mt-0 md:-mt-32">
         <TypeWriter words={["Buscou, achou, contratou. Simples assim!"]} />
 
@@ -39,10 +47,10 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="w-full h-52 md:h-80 bg-app-gray-100 rounded-md relative mt-48 md:mt-0">
+      <div className="w-full h-52 xl:h-80 bg-app-gray-100 rounded-md relative mt-48 md:mt-6 xl:mt-0">
         <Image
           src="/hero-img.svg"
-          className="w-[300px] md:w-[450px] absolute bottom-0 left-1/2 -translate-x-1/2"
+          className="w-[300px] xl:w-[450px] absolute bottom-0 left-1/2 -translate-x-1/2"
           alt=""
           width={800}
           height={800}

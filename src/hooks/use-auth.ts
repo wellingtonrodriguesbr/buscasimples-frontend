@@ -26,7 +26,7 @@ export function useAuth() {
       const { data } = await api.post<{ token: string }>("/sessions", {
         code,
       });
-      setAccessToken(data.token.replaceAll('"', ""));
+      setAccessToken(data.token);
       setStatus("success");
       router.push("/");
 

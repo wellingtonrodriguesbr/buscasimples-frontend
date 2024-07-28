@@ -54,9 +54,7 @@ export function RegisterForm({
     try {
       await registerUser({ name, email, phone });
 
-      toast.success("Cadastro realizado com sucesso");
       form.reset();
-
       router.push(redirectLink);
     } catch (error) {
       if (error instanceof AxiosError) {

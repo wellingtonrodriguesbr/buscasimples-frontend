@@ -13,11 +13,15 @@ import {
 import { Banner } from "./banner";
 
 import Autoplay from "embla-carousel-autoplay";
+import { useUserAuthenticate } from "@/hooks/use-user-authenticate";
+import { WelcomeMessage } from "./welcome-message";
 
 export function BannerCarousel() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+
+  const { authenticate } = useUserAuthenticate();
 
   useEffect(() => {
     if (!api) {
@@ -33,7 +37,12 @@ export function BannerCarousel() {
   }, [api]);
 
   return (
-    <div className="w-full max-w-screen-xl mx-auto px-4 mt-24">
+    <div
+      data-authenticate={authenticate}
+      className="w-full max-w-screen-xl mx-auto px-4 mt-24 data-[authenticate=true]:mt-12"
+    >
+      {authenticate ? <WelcomeMessage /> : null}
+
       <h2 className="font-medium text-2xl md:text-3xl mb-6">
         O que você está buscando hoje?
       </h2>

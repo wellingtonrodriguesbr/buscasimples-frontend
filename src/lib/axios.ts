@@ -9,7 +9,10 @@ api.interceptors.request.use((config) => {
   const accessToken = localStorage.getItem("accessToken");
 
   if (accessToken) {
-    config.headers.set("Authorization", `Bearer ${accessToken}`);
+    config.headers.set(
+      "Authorization",
+      `Bearer ${accessToken.replaceAll('"', "")}`
+    );
   }
 
   return config;
@@ -33,7 +36,7 @@ api.interceptors.response.use(
 
     const { data } = await api.patch("/token/refresh");
 
-    localStorage.setItem("accessToken", data.token);
+    localStorage.setItem("accessToken", `"${data.token}"`);
 
     return api(originalRequest);
   }

@@ -17,7 +17,7 @@ import { Button } from "@/components/ui/button";
 export function ProfessionalBenefits() {
   return (
     <section className="w-full max-w-screen-xl px-4 mx-auto mt-16 md:mt-36">
-      <div className="flex flex-col md:flex-row items-start gap-6 justify-between">
+      <div className="flex flex-col md:flex-row items-start gap-6 justify-between md:sticky xl:relative top-20 xl:top-0 bg-app-gray-50 pt-6 z-10 xl:z-auto">
         <h3 className="text-2xl md:text-3xl font-medium max-w-xl leading-tight md:leading-tight">
           Veja ao que você terá acesso sendo um Profissa na nossa plataforma
         </h3>
@@ -28,8 +28,8 @@ export function ProfessionalBenefits() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-2 md:gap-3 mt-12">
-        <div className="flex flex-col justify-end gap-2 h-[380px] xl:min-h-48 xl:h-full row-span-full bg-professional bg-cover bg-center p-4 rounded-md relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-3 mt-12">
+        <div className="flex flex-col justify-end gap-2 h-[380px] xl:min-h-48 xl:h-full bg-professional bg-cover bg-center p-4 rounded-md relative md:sticky xl:relative md:top-60 xl:top-0">
           <Button asChild>
             <Link
               href="/profissional/cadastro"
@@ -42,7 +42,7 @@ export function ProfessionalBenefits() {
           <BadgeCheck className="w-12 h-12 absolute -top-4 -right-4 fill-app-blue-400 stroke-white" />
         </div>
 
-        <div className="col-span-1 md:col-span-2 grid grid-cols-2 xl:grid-cols-4 gap-2 md:gap-3">
+        <div className="col-span-1 xl:col-span-2 grid grid-cols-2 xl:grid-cols-4 gap-2 md:gap-3 md:sticky md:top-0">
           {benefits.map((item, index) => (
             <div
               key={index}
