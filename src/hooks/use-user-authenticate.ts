@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { useLocalStorage } from "react-use";
 
 export function useUserAuthenticate() {
   const [authenticate, setAuthenticate] = useState(false);
-  const accessToken = localStorage.getItem("accessToken");
+  const [accessToken] = useLocalStorage<string>("accessToken");
 
   useEffect(() => {
     if (accessToken) {

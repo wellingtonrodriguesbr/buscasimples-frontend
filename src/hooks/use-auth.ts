@@ -3,10 +3,12 @@ import { useQuery } from "@tanstack/react-query";
 import { AxiosError } from "axios";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
+import { useLocalStorage } from "react-use";
 import { toast } from "sonner";
 
 export function useAuth() {
   const router = useRouter();
+  const [_, setAccessToken] = useLocalStorage<string>("accessToken");
   const [status, setStatus] = useState<"pending" | "success" | "error">(
     "pending"
   );
@@ -24,7 +26,7 @@ export function useAuth() {
       const { data } = await api.post<{ token: string }>("/sessions", {
         code,
       });
-      localStorage.setItem("accessToken", data.token);
+      setAccessToken(data.token.replaceAll('"', ""));
       setStatus("success");
       router.push("/");
 
