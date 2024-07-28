@@ -16,8 +16,7 @@ export function SelectAccountTypeOptions() {
   }
 
   return (
-    <div className="mt-6">
-      <span>Tipo de conta</span>
+    <div>
       <div className="flex flex-col gap-2 mt-3">
         <Button
           variant="secondary"

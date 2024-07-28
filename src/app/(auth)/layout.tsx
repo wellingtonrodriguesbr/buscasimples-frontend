@@ -21,7 +21,7 @@ export default function AuthLayout({
             />
           </Link>
         </header>
-        <h1 className="font-semibold text-2xl">Aqui tudo é simples.</h1>
+
         {children}
 
         <footer className="flex flex-1 items-end mt-12">

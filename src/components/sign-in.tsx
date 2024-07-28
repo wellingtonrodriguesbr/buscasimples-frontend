@@ -5,8 +5,11 @@ import { SignInForm } from "./sign-in-form";
 
 export function SignIn() {
   return (
-    <div className="flex flex-col gap-4 mt-6">
-      <h1 className="font-medium">Acessar minha conta</h1>
+    <div className="flex flex-col gap-4">
+      <h1 className="font-semibold text-2xl mb-6">
+        Estamos felizes em ter você aqui
+      </h1>
+      <h2 className="font-medium">Acessar minha conta</h2>
       <SignInForm />
 
       <Separator className="w-full h-px bg-app-gray-200 mt-5 mb-6" />

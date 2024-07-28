@@ -6,6 +6,10 @@ import { SelectAccountTypeOptions } from "./select-account-type-options";
 export function SelectAccountType() {
   return (
     <>
+      <h1 className="font-semibold text-2xl mb-6">
+        Faça seu cadastro, é simples.
+      </h1>
+      <h2 className="font-medium">Tipo de conta</h2>
       <SelectAccountTypeOptions />
       <Separator className="w-full h-px bg-app-gray-200 mt-5 mb-6" />
       <p className="text-sm text-center text-app-gray-500">

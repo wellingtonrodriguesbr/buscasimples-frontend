@@ -53,15 +53,29 @@ export function RegisterForm({
   async function onSubmit({ name, email, phone }: RegisterFormSchema) {
     try {
       await registerUser({ name, email, phone });
-      router.push(redirectLink);
 
       toast.success("Cadastro realizado com sucesso");
       form.reset();
+
+      router.push(redirectLink);
     } catch (error) {
       if (error instanceof AxiosError) {
-        console.log(error);
+        if (
+          error.response?.status === 409 &&
+          error.response.data.message ===
+            "User already exists with the same email"
+        ) {
+          toast.error("Já existe um usuário cadastrado com este e-mail");
+        } else if (
+          error.response?.status === 409 &&
+          error.response.data.message ===
+            "User already exists with the same phone"
+        ) {
+          toast.error(
+            "Já existe um usuário cadastrado com este número de celular"
+          );
+        }
       }
-      console.log(error);
     }
   }
 

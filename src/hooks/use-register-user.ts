@@ -8,10 +8,13 @@ interface RegisterUserRequest {
 }
 
 export function useRegisterUser() {
-  const { mutateAsync: registerUser, isPending: isRegisterUserPending } =
-    useMutation({
-      mutationFn: handleRegister,
-    });
+  const {
+    mutateAsync: registerUser,
+    isPending: isRegisterUserPending,
+    status,
+  } = useMutation({
+    mutationFn: handleRegister,
+  });
 
   async function handleRegister({ name, email, phone }: RegisterUserRequest) {
     const { data } = await api.post<{ userId: string }>("/users", {
@@ -23,5 +26,5 @@ export function useRegisterUser() {
     return data.userId;
   }
 
-  return { registerUser, isRegisterUserPending };
+  return { registerUser, isRegisterUserPending, status };
 }
