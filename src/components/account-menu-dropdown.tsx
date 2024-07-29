@@ -45,8 +45,11 @@ export function AccountMenuDropdown() {
       <DropdownMenuContent align="end" className="w-full">
         <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <Link href="/" className="flex items-center gap-2">
+        <DropdownMenuItem asChild>
+          <Link
+            href="/meus-dados"
+            className="flex items-center gap-2 cursor-pointer"
+          >
             <Settings className="size-4" />
             Meus dados
           </Link>

@@ -1,5 +1,11 @@
+import { Footer } from "@/components/footer";
 import { Professionals } from "@/components/professionals";
 
 export default function ProfessionalsPage() {
-  return <Professionals />;
+  return (
+    <main>
+      <Professionals />
+      <Footer />
+    </main>
+  );
 }

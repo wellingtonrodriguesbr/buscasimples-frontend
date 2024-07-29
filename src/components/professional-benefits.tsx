@@ -18,7 +18,7 @@ export function ProfessionalBenefits() {
   return (
     <section className="w-full max-w-screen-xl px-4 mx-auto mt-16 md:mt-36">
       <div className="flex flex-col md:flex-row items-start gap-6 justify-between md:sticky xl:relative top-20 xl:top-0 bg-app-gray-50 pt-6 z-10 xl:z-auto">
-        <h3 className="text-2xl md:text-3xl font-medium max-w-xl leading-tight md:leading-tight">
+        <h3 className="text-2xl xl:text-3xl font-medium max-w-xl leading-tight md:leading-tight">
           Veja ao que você terá acesso sendo um Profissa na nossa plataforma
         </h3>
         <p className="text-sm max-w-md text-app-gray-600">

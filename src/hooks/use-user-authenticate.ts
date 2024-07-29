@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { useLocalStorage } from "react-use";
+import { useGetUserProfile } from "./use-get-user-profile";
 
 export function useUserAuthenticate() {
   const [authenticate, setAuthenticate] = useState(false);
-  const [accessToken] = useLocalStorage<string>("accessToken");
+  const { user, isGetUserProfilePending } = useGetUserProfile();
 
   useEffect(() => {
-    if (accessToken) {
+    if (user && !isGetUserProfilePending) {
       setAuthenticate(true);
     }
-  }, [accessToken]);
+  }, [isGetUserProfilePending, user]);
 
-  return { authenticate };
+  return { authenticate, loading: isGetUserProfilePending };
 }
