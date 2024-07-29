@@ -31,7 +31,7 @@ export function AccountMenuDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="secondary" className="hidden md:flex">
+        <Button variant="secondary" size="sm" className="hidden md:flex">
           {isGetUserProfilePending ? (
             <Loader2 className="size-4 animate-spin" />
           ) : (
@@ -47,18 +47,21 @@ export function AccountMenuDropdown() {
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
           <Link
-            href="/meus-dados"
+            href="/minha-conta"
             className="flex items-center gap-2 cursor-pointer"
           >
             <Settings className="size-4" />
             Meus dados
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem asChild>
+        <DropdownMenuItem
+          className="text-rose-500 cursor-pointer hover:text-rose-500 focus:text-rose-500 hover:bg-rose-50 focus:bg-rose-50"
+          asChild
+        >
           <button
             disabled={isSignOutPending}
             onClick={handleSignOut}
-            className="flex items-center gap-2 text-rose-500 cursor-pointer hover:text-rose-500 focus:text-rose-500 hover:bg-rose-50 focus:bg-rose-50"
+            className="flex items-center gap-2"
           >
             {isSignOutPending ? (
               <Loader2 className="size-4 animate-spin" />

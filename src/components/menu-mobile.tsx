@@ -10,7 +10,7 @@ import { useUserAuthenticate } from "@/hooks/use-user-authenticate";
 
 export function MenuMobile() {
   const path = usePathname();
-  const { authenticate, loading } = useUserAuthenticate();
+  const { authenticate, isPending } = useUserAuthenticate();
 
   return (
     <section
@@ -42,14 +42,14 @@ export function MenuMobile() {
         <WhatsappIcon className="size-4 fill-app-gray-500 group-data-[active=true]:fill-app-blue-400 transition-colors" />
         Dúvidas
       </Link>
-      {loading ? (
+      {isPending ? (
         <Loader2 className="size-4 animate-spin text-app-blue-400" />
       ) : null}
 
-      {authenticate && !loading ? (
+      {authenticate && !isPending ? (
         <Link
-          href="/meus-dados"
-          data-active={path.includes("/meus-dados")}
+          href="/minha-conta"
+          data-active={path.includes("/minha-conta")}
           className="flex flex-col gap-1 items-center text-xs font-medium font-display text-app-gray-500 data-[active=true]:text-app-gray-700 group transition-colors"
         >
           <User className="size-4 text-app-gray-500 group-data-[active=true]:text-app-blue-400 transition-colors" />
@@ -57,7 +57,7 @@ export function MenuMobile() {
         </Link>
       ) : null}
 
-      {!authenticate && !loading ? <DrawerMenuMobile /> : null}
+      {!authenticate && !isPending ? <DrawerMenuMobile /> : null}
     </section>
   );
 }

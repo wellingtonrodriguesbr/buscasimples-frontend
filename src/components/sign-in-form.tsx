@@ -69,11 +69,7 @@ export function SignInForm() {
             <FormItem>
               <FormLabel>E-mail</FormLabel>
               <FormControl>
-                <Input
-                  type="email"
-                  placeholder="seuemaildeacesso@email.com"
-                  {...field}
-                />
+                <Input type="email" placeholder="Seu e-mail" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

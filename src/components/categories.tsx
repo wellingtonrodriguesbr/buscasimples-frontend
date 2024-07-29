@@ -24,7 +24,7 @@ export function Categories() {
                 href="/profissionais"
                 className="flex flex-col items-center gap-2 group"
               >
-                <div className="flex items-center justify-center size-24 rounded-lg bg-app-blue-400/5 group-hover:bg-app-blue-400 transition-colors"></div>
+                <div className="flex items-center justify-center size-24 rounded-md bg-app-blue-400/5 group-hover:bg-app-blue-400 transition-colors"></div>
                 <span className="text-xs text-center text-app-gray-700">
                   Categoria {index + 1}
                 </span>

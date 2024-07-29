@@ -103,11 +103,7 @@ export function RegisterForm({
             <FormItem>
               <FormLabel>E-mail</FormLabel>
               <FormControl>
-                <Input
-                  type="email"
-                  placeholder="seumelhor@email.com"
-                  {...field}
-                />
+                <Input type="email" placeholder="Seu e-mail" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

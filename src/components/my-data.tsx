@@ -34,4 +34,9 @@ const ITEMS = [
     decription: "Fale com o nosso suporte",
     link: "/",
   },
+  {
+    title: "Precisamos da sua ajuda",
+    decription: "Ajude-nos a manter este projeto no ar",
+    link: "/",
+  },
 ];
