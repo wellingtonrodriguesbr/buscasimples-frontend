@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,10 +12,23 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useGetUserProfile } from "@/hooks/use-get-user-profile";
 import { Button } from "./ui/button";
-import { Loader2, User } from "lucide-react";
+import { Loader2, LogOut, Settings, User } from "lucide-react";
+import { useSignOut } from "@/hooks/use-sign-out";
+import { toast } from "sonner";
 
 export function AccountMenuDropdown() {
   const { user, isGetUserProfilePending } = useGetUserProfile();
+  const { signOut, isSignOutPending } = useSignOut();
+
+  async function handleSignOut() {
+    try {
+      await signOut();
+      toast.success("Deslogado com sucesso");
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <DropdownMenu>
@@ -24,18 +39,36 @@ export function AccountMenuDropdown() {
           ) : (
             <>
               <User className="size-4" />
-              {user?.name}
+              {user && user.name}
             </>
           )}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-full">
+      <DropdownMenuContent align="end" className="w-full">
         <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href="/" className="flex items-center gap-2">
+            <Settings className="size-4" />
+            Meus dados
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <button
+            disabled={isSignOutPending}
+            onClick={handleSignOut}
+            className="flex items-center gap-2 text-rose-500 cursor-pointer hover:text-rose-500 focus:text-rose-500 hover:bg-rose-50 focus:bg-rose-50"
+          >
+            {isSignOutPending ? (
+              <Loader2 className="size-4 animate-spin" />
+            ) : (
+              <>
+                <LogOut className="size-4" />
+                Sair da minha conta
+              </>
+            )}
+          </button>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
