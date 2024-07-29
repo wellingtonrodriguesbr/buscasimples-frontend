@@ -1,7 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { toast } from "sonner";
 import { api } from "@/lib/axios";
-import { AxiosError } from "axios";
 
 export interface User {
   id: string;
@@ -24,12 +22,7 @@ export function useGetUserProfile() {
       const { data } = await api.get<{ user: User }>("/me");
       return data.user;
     } catch (error) {
-      if (error instanceof AxiosError) {
-        if (error.response?.status === 401) {
-          toast.error("Você foi deslogado, faça login novamente");
-        }
-        toast.error("Falha ao buscar perfil");
-      }
+      console.log(error);
     }
   }
 
