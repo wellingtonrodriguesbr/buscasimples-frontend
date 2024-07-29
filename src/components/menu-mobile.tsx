@@ -2,13 +2,15 @@
 
 import Link from "next/link";
 
-import { Home, Search } from "lucide-react";
+import { Home, Search, User } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { WhatsappIcon } from "@/components/icons/whatsapp";
 import { DrawerMenuMobile } from "./drawer-menu-mobile";
+import { useUserAuthenticate } from "@/hooks/use-user-authenticate";
 
 export function MenuMobile() {
   const path = usePathname();
+  const { authenticate } = useUserAuthenticate();
 
   return (
     <section
@@ -40,7 +42,18 @@ export function MenuMobile() {
         <WhatsappIcon className="size-4 fill-app-gray-500 group-data-[active=true]:fill-app-blue-400 transition-colors" />
         Dúvidas
       </Link>
-      <DrawerMenuMobile />
+      {authenticate ? (
+        <Link
+          href="/"
+          data-active={path === "/meus-dados"}
+          className="flex flex-col gap-1 items-center text-xs font-medium font-display text-app-gray-500 data-[active=true]:text-app-gray-700 group transition-colors"
+        >
+          <User className="size-4" />
+          Perfil
+        </Link>
+      ) : (
+        <DrawerMenuMobile />
+      )}
     </section>
   );
 }

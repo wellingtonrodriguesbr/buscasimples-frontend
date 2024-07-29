@@ -14,7 +14,6 @@ import { useGetUserProfile } from "@/hooks/use-get-user-profile";
 import { Button } from "./ui/button";
 import { Loader2, LogOut, Settings, User } from "lucide-react";
 import { useSignOut } from "@/hooks/use-sign-out";
-import { toast } from "sonner";
 
 export function AccountMenuDropdown() {
   const { user, isGetUserProfilePending } = useGetUserProfile();
@@ -23,7 +22,6 @@ export function AccountMenuDropdown() {
   async function handleSignOut() {
     try {
       await signOut();
-      toast.success("Deslogado com sucesso");
       window.location.reload();
     } catch (error) {
       console.log(error);
