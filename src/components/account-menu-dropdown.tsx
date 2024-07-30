@@ -14,6 +14,8 @@ import { useGetUserProfile } from "@/hooks/use-get-user-profile";
 import { Button } from "./ui/button";
 import { Loader2, LogOut, Settings, User } from "lucide-react";
 import { useSignOut } from "@/hooks/use-sign-out";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Skeleton } from "./ui/skeleton";
 
 export function AccountMenuDropdown() {
   const { user, isGetUserProfilePending } = useGetUserProfile();
@@ -43,7 +45,33 @@ export function AccountMenuDropdown() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-full">
-        <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
+        <DropdownMenuLabel className="flex items-center gap-2">
+          {isGetUserProfilePending ? (
+            <Skeleton className="size-10 rounded-full" />
+          ) : (
+            <Avatar>
+              <AvatarImage />
+              <AvatarFallback className="uppercase text-xs">
+                {user?.name.split(" ")[0].at(0)}
+                {user?.name.split(" ")[1].at(0)}
+              </AvatarFallback>
+            </Avatar>
+          )}
+
+          <div className="flex flex-col gap-1">
+            {isGetUserProfilePending ? (
+              <>
+                <Skeleton className="w-36 h-4" />
+                <Skeleton className="w-32 h-4" />
+              </>
+            ) : (
+              <>
+                <span className="leading-none">{user?.name}</span>
+                <span className="font-normal text-xs">{user?.email}</span>
+              </>
+            )}
+          </div>
+        </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
           <Link

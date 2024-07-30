@@ -4,12 +4,13 @@ import { useRouter } from "next/navigation";
 
 import { ArrowLeft, Copy } from "lucide-react";
 import { Button } from "./ui/button";
+import { HelpCostTable } from "./help-cost-table";
 
 export function Help() {
   const router = useRouter();
 
   return (
-    <section className="w-full mt-8 max-w-screen-md px-4 mx-auto">
+    <section className="w-full mt-8 max-w-screen-xl px-4 mx-auto pb-24">
       <Button
         variant="link"
         onClick={() => router.back()}
@@ -39,6 +40,10 @@ export function Help() {
         utilizamos para manter este projeto online, trazendo transparência e
         clareza para você que irá contribuir conosco.
       </p>
+
+      <div className="overflow-x-auto mt-8 md:mt-12">
+        <HelpCostTable />
+      </div>
     </section>
   );
 }
