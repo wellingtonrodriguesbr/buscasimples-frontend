@@ -51,7 +51,7 @@ export function AccountMenuDropdown() {
             className="flex items-center gap-2 cursor-pointer"
           >
             <Settings className="size-4" />
-            Meus dados
+            Minha conta
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem

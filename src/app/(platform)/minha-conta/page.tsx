@@ -1,9 +1,9 @@
-import { MyData } from "@/components/my-data";
+import { MyAccount } from "@/components/my-account";
 
-export default function MyDataPage() {
+export default function MyAccountPage() {
   return (
     <main>
-      <MyData />
+      <MyAccount />
     </main>
   );
 }

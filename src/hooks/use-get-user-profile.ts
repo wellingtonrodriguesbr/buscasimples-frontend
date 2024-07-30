@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { api } from "@/lib/axios";
+import { AxiosError } from "axios";
+import { useLocalStorage } from "react-use";
 
 export interface User {
   id: string;
@@ -11,6 +13,7 @@ export interface User {
 }
 
 export function useGetUserProfile() {
+  const [_, __, remove] = useLocalStorage("accessToken");
   const { data: user, isPending: isGetUserProfilePending } = useQuery({
     queryKey: ["user-profile"],
     queryFn: handleGetUserProfile,
@@ -22,6 +25,11 @@ export function useGetUserProfile() {
       const { data } = await api.get<{ user: User }>("/me");
       return data.user;
     } catch (error) {
+      if (error instanceof AxiosError) {
+        if (error.response?.status === 404) {
+          remove();
+        }
+      }
       console.log(error);
     }
   }

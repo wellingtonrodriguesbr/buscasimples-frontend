@@ -2,18 +2,22 @@ import Link from "next/link";
 
 import { ChevronRight } from "lucide-react";
 
-interface MyDataItemProps {
+interface MyAccountItemProps {
   title: string;
   description: string;
   link: string;
 }
 
-export function MyDataItem({ title, description, link }: MyDataItemProps) {
+export function MyAccountItem({
+  title,
+  description,
+  link,
+}: MyAccountItemProps) {
   return (
     <li className="border-b">
       <Link
         href={link}
-        className="w-full flex items-center justify-between py-6 group"
+        className="w-full flex items-center justify-between py-4 md:py-6 group"
       >
         <div className="flex flex-col gap-1">
           <span className="text-base md:text-lg font-medium text-app-gray-700">

@@ -24,6 +24,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useGetUserLocation } from "@/hooks/use-get-user-location";
 import { Input } from "./ui/input";
+import { formatCEP } from "@/utils/format-cep";
+import { useState } from "react";
 
 const formSchema = z.object({
   zipCode: z.coerce
@@ -35,6 +37,8 @@ const formSchema = z.object({
 type FormSchemaData = z.infer<typeof formSchema>;
 
 export default function UserLocationDialog() {
+  const [openDialog, setOpenDialog] = useState(false);
+
   const form = useForm<FormSchemaData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -50,10 +54,11 @@ export default function UserLocationDialog() {
   async function onSubmit() {
     await fetchUserLocation();
     form.reset();
+    setOpenDialog(false);
   }
 
   return (
-    <Dialog>
+    <Dialog open={openDialog} onOpenChange={setOpenDialog}>
       <DialogTrigger asChild>
         <Button type="button" className="gap-2" size="sm" variant="ghost">
           <MapPin className="size-4" />
@@ -83,7 +88,11 @@ export default function UserLocationDialog() {
                   <FormItem>
                     <FormLabel className="sr-only">CEP</FormLabel>
                     <FormControl>
-                      <Input placeholder="CEP" {...field} />
+                      <Input
+                        placeholder="CEP"
+                        {...field}
+                        value={formatCEP(field.value)}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
