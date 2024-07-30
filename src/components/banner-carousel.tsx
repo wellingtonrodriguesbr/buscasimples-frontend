@@ -39,7 +39,7 @@ export function BannerCarousel() {
   return (
     <div
       data-authenticate={authenticate}
-      className="w-full max-w-screen-xl mx-auto px-4 mt-24 data-[authenticate=true]:mt-12"
+      className="w-full max-w-screen-xl mx-auto px-4 mt-24 data-[authenticate=true]:mt-8"
     >
       {authenticate ? <WelcomeMessage /> : null}
 
