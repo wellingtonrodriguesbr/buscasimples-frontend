@@ -10,7 +10,11 @@ export function Help() {
 
   return (
     <section className="w-full mt-8 max-w-screen-md px-4 mx-auto">
-      <Button variant="link" onClick={() => router.back()} className="mb-8">
+      <Button
+        variant="link"
+        onClick={() => router.back()}
+        className="mb-4 md:mb-8 px-0"
+      >
         <ArrowLeft className="size-4" />
         Voltar
       </Button>
