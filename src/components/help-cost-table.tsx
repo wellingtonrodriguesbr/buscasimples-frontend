@@ -102,7 +102,7 @@ const DATA = [
     tool: "CloudFlare",
     link: "https://www.cloudflare.com/pt-br/developer-platform/r2/",
     definition:
-      "Serviço para armazenamento das imagens do profissionais da plataforma",
+      "Serviço para armazenamento das imagens dos profissionais da plataforma",
     frequency: "",
     amount: 0,
   },
