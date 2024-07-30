@@ -34,11 +34,12 @@ export function Help() {
         clientes, do que os ajudam. Apesar de a plataforma ser gratuita para
         todos, existem custos para mantê-la no ar. Atualmente, estou arcando com
         esses custos sozinho, mas conforme a plataforma cresce, os custos também
-        aumentam. Para que este projeto continue funcionando e te ajudando de
-        alguma forma, peço encarecidamente que considere nos apoiar com qualquer
-        quantia. Abaixo, estou deixando uma tabela com todas as ferramentas que
-        utilizamos para manter este projeto online, trazendo transparência e
-        clareza para você que irá contribuir conosco.
+        aumentam. Para que este projeto continue funcionando, trazendo novas
+        funcionalidades e te ajudando de alguma forma, peço encarecidamente que
+        considere nos apoiar com qualquer quantia. Abaixo, estou deixando uma
+        tabela com todas as ferramentas que utilizamos para manter este projeto
+        online, trazendo transparência e clareza para você que irá contribuir
+        conosco.
       </p>
 
       <div className="overflow-x-auto mt-8 md:mt-12">
