@@ -10,7 +10,7 @@ export function ProfessionalRegister() {
         Faça seu cadastro, é simples.
       </h1>
       <h2 className="font-medium">Dados de cadastro</h2>
-      <RegisterForm submitButtonText="Avançar" />
+      <RegisterForm redirectLink="/minha-conta/profissional" />
       <p className="text-center text-app-gray-500 text-sm mt-5">
         Ao criar uma conta, você concorda com os nossos{" "}
         <Link href="" className="underline">

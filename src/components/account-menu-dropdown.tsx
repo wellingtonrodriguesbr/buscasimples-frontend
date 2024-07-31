@@ -76,7 +76,7 @@ export function AccountMenuDropdown() {
         <DropdownMenuItem asChild>
           <Link
             href="/minha-conta"
-            className="flex items-center gap-2 cursor-pointer"
+            className="w-full flex items-center gap-2 cursor-pointer"
           >
             <Settings className="size-4" />
             Minha conta
@@ -89,7 +89,7 @@ export function AccountMenuDropdown() {
           <button
             disabled={isSignOutPending}
             onClick={handleSignOut}
-            className="flex items-center gap-2"
+            className="w-full flex items-center gap-2"
           >
             {isSignOutPending ? (
               <Loader2 className="size-4 animate-spin" />

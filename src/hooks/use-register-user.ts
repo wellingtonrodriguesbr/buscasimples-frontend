@@ -5,6 +5,7 @@ interface RegisterUserRequest {
   name: string;
   email: string;
   phone: string;
+  redirectLink?: string;
 }
 
 export function useRegisterUser() {
@@ -16,11 +17,17 @@ export function useRegisterUser() {
     mutationFn: handleRegister,
   });
 
-  async function handleRegister({ name, email, phone }: RegisterUserRequest) {
+  async function handleRegister({
+    name,
+    email,
+    phone,
+    redirectLink,
+  }: RegisterUserRequest) {
     const { data } = await api.post<{ userId: string }>("/users", {
       name,
       email,
       phone,
+      redirectLink,
     });
 
     return data.userId;

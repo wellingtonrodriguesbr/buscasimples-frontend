@@ -23,7 +23,6 @@ import { formatPhoneNumber } from "@/utils/format-phone-number";
 
 interface RegisterFormProps {
   redirectLink?: string;
-  submitButtonText?: string;
 }
 
 const registerFormSchema = z.object({
@@ -34,10 +33,7 @@ const registerFormSchema = z.object({
 
 type RegisterFormSchema = z.infer<typeof registerFormSchema>;
 
-export function RegisterForm({
-  redirectLink = `${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN_URL}/cadastro/sucesso`,
-  submitButtonText = "Finalizar cadastro",
-}: RegisterFormProps) {
+export function RegisterForm({ redirectLink }: RegisterFormProps) {
   const router = useRouter();
 
   const { registerUser, isRegisterUserPending } = useRegisterUser();
@@ -52,10 +48,12 @@ export function RegisterForm({
 
   async function onSubmit({ name, email, phone }: RegisterFormSchema) {
     try {
-      await registerUser({ name, email, phone });
+      await registerUser({ name, email, phone, redirectLink });
 
       form.reset();
-      router.push(redirectLink);
+      router.push(
+        `${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN_URL}/cadastro/sucesso`
+      );
     } catch (error) {
       if (error instanceof AxiosError) {
         if (
@@ -135,10 +133,7 @@ export function RegisterForm({
           {isRegisterUserPending ? (
             <Loader2 className="size-4 animate-spin" />
           ) : (
-            <>
-              {submitButtonText}
-              <ArrowRight className="size-4" />
-            </>
+            "Cadastrar"
           )}
         </Button>
       </form>

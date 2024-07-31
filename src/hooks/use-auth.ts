@@ -13,6 +13,7 @@ export function useAuth() {
   );
   const searchParams = useSearchParams();
   const code = searchParams.get("codigo");
+  const redirectLink = searchParams.get("redirect");
 
   const { isPending: isAuthPending } = useQuery({
     queryKey: [""],
@@ -27,7 +28,7 @@ export function useAuth() {
       });
       setAccessToken(data.token);
       setStatus("success");
-      window.location.href = "/";
+      window.location.href = redirectLink ? redirectLink : "/";
       return data.token;
     } catch (error) {
       if (error instanceof AxiosError) {
