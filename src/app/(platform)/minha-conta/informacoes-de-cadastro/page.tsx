@@ -1,4 +1,4 @@
-import { RegisterInformation } from "@/components/register-information";
+import { RegisterInformation } from "@/components/pages/my-account/register-information";
 
 export default function RegisterInformationPage() {
   return (

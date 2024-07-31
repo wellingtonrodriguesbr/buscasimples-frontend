@@ -4,8 +4,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+} from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ProfessionalProfileDialog } from "./professional-profile-dialog";
 import { ProfessionalInformation } from "./professional-information";
 

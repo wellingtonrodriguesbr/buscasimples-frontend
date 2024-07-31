@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Check, ChevronRight, Handshake, Search } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 export function SelectAccountTypeOptions() {
   const router = useRouter();

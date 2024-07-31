@@ -9,18 +9,18 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "./ui/form";
+} from "@/components/ui/form";
 import { z } from "zod";
 import { AxiosError } from "axios";
 import { toast } from "sonner";
-import { Input } from "./ui/input";
+import { Input } from "@/components/ui/input";
 import { formatPhoneNumber } from "@/utils/format-phone-number";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { ArrowLeft, Loader2 } from "lucide-react";
 import { useGetUserProfile } from "@/hooks/use-get-user-profile";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Skeleton } from "./ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 import { useUpdateUserInformation } from "@/hooks/use-update-user-information";
 
 const registerInformationSchema = z.object({

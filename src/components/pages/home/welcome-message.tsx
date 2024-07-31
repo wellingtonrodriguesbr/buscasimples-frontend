@@ -1,5 +1,5 @@
 import { useGetUserProfile } from "@/hooks/use-get-user-profile";
-import { Skeleton } from "./ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 import dayjs from "dayjs";
 
 export function WelcomeMessage() {

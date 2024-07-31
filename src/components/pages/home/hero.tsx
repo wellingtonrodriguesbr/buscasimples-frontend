@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { TypeWriter } from "./typewriter";
-import { WhatsappIcon } from "./icons/whatsapp";
+import { WhatsappIcon } from "../../icons/whatsapp";
 import { useUserAuthenticate } from "@/hooks/use-user-authenticate";
 
 export function Hero() {

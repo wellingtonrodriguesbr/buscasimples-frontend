@@ -1,4 +1,4 @@
-import { ProfessionalRegister } from "@/components/professional-register";
+import { ProfessionalRegister } from "@/components/pages/professionals/professional-register";
 
 export default function ProfessionalRegisterPage() {
   return (

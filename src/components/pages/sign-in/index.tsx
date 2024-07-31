@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Separator } from "./ui/separator";
+import { Separator } from "@/components/ui/separator";
 import { SignInForm } from "./sign-in-form";
 
 export function SignIn() {

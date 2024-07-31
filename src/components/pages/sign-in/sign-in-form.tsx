@@ -7,12 +7,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "./ui/form";
+} from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { AxiosError } from "axios";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";

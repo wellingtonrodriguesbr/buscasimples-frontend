@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 
 import { ArrowLeft, Copy } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { HelpCostTable } from "./help-cost-table";
 
 export function Help() {

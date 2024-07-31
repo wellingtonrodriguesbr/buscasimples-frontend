@@ -1,16 +1,16 @@
 import Link from "next/link";
 
-import { RegisterForm } from "./register-form";
-import { Separator } from "./ui/separator";
+import { RegisterForm } from "../register/register-form";
+import { Separator } from "@/components/ui/separator";
 
-export function Register() {
+export function ProfessionalRegister() {
   return (
     <div className="flex flex-col gap-4">
       <h1 className="font-semibold text-2xl mb-6">
         Faça seu cadastro, é simples.
       </h1>
       <h2 className="font-medium">Dados de cadastro</h2>
-      <RegisterForm />
+      <RegisterForm submitButtonText="Avançar" />
       <p className="text-center text-app-gray-500 text-sm mt-5">
         Ao criar uma conta, você concorda com os nossos{" "}
         <Link href="" className="underline">
