@@ -16,7 +16,7 @@ export function FooterItems({ items }: FooterItemProps) {
         <li key={item.title}>
           <Link
             href={item.url}
-            className="underline text-sm text-app-gray-600 flex items-center gap-2 group"
+            className="w-fit underline text-sm text-app-gray-600 flex items-center gap-2 group"
           >
             {item.title}
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

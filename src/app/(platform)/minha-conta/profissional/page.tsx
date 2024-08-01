@@ -1,7 +1,9 @@
-export default function MyAccountProfessionalPage() {
+import { MyProfessionalAccount } from "@/components/pages/my-account/my-professional-account";
+
+export default function MyProfessionalAccountPage() {
   return (
     <main>
-      <h1>Profissional</h1>
+      <MyProfessionalAccount />
     </main>
   );
 }
