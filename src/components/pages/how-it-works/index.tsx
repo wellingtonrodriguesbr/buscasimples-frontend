@@ -55,7 +55,7 @@ export function HowItWorks() {
         </p>
 
         <div className="flex flex-col md:flex-row items-center gap-2">
-          <Button asChild>
+          <Button className="w-full md:w-fit" asChild>
             <Link href="/profissionais">
               Procurar o profissional ideal <ArrowUpRight className="size-4" />
             </Link>
@@ -108,7 +108,7 @@ export function HowItWorks() {
           voluptate dolorem autem ratione ipsa quo doloremque rem eum vitae.
         </p>
         <div className="flex flex-col md:flex-row items-center gap-2">
-          <Button asChild>
+          <Button className="w-full md:w-fit" asChild>
             <Link href="/cadastro/profissional">
               Quero me cadastrar na plataforma
               <ArrowRight className="size-4" />
