@@ -5,7 +5,6 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { TypeWriter } from "./typewriter";
-import { WhatsappIcon } from "../../icons/whatsapp";
 import { useUserAuthenticate } from "@/hooks/use-user-authenticate";
 
 export function Hero() {
@@ -29,17 +28,13 @@ export function Hero() {
         </p>
 
         <div className="flex flex-col md:flex-row items-center gap-3 mt-8">
-          <Button className="w-full" asChild>
+          <Button className="w-full md:w-fit" asChild>
             <Link href="/cadastro/tipo-de-conta">
               Crie uma conta gratuitamente
             </Link>
           </Button>
-          <Button variant="secondary" className="w-full md:w-fit" asChild>
-            <Link
-              href="https://api.whatsapp.com/send?phone=+5511950537096&text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20a%20plataforma,%20pode%20me%20ajudar?"
-              className="gap-2"
-            >
-              <WhatsappIcon className="fill-app-black size-4" />
+          <Button variant="outline" className="w-full md:w-fit" asChild>
+            <Link href="/como-funciona" className="gap-2">
               Mais informações
             </Link>
           </Button>

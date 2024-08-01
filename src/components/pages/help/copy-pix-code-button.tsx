@@ -16,7 +16,7 @@ export function CopyPixCodeButton() {
   }
 
   return (
-    <Button onClick={handleCopyCode} className="flex md:hidden w-full md:w-fit">
+    <Button onClick={handleCopyCode} className="w-full flex md:hidden">
       {copiedCode ? <Check className="size-4" /> : <Copy className="size-4" />}
       {copiedCode ? "Código copiado" : "Copiar código pix"}
     </Button>

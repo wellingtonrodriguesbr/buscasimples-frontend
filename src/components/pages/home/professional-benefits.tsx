@@ -30,7 +30,7 @@ export function ProfessionalBenefits() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-3 mt-12">
         <div className="flex flex-col justify-end gap-2 h-[380px] xl:min-h-48 xl:h-full bg-professional bg-cover bg-center p-4 rounded-md relative md:sticky xl:relative md:top-60 xl:top-0">
-          <Button asChild>
+          <Button className="w-full" asChild>
             <Link
               href="/cadastro/profissional"
               className="justify-between group"
@@ -78,7 +78,7 @@ export function ProfessionalBenefits() {
 const benefits = [
   {
     icon: <DollarSign className="w-4 h-4" />,
-    title: "Não pague nada agora",
+    title: "100% gratuito e sempre será",
     description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
   },
   {

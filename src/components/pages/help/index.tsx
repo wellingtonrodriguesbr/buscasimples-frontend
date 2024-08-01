@@ -16,7 +16,7 @@ export function Help() {
       <Button
         variant="link"
         onClick={() => router.back()}
-        className="mb-4 md:mb-8 px-0"
+        className="w-fit mb-4 px-0"
       >
         <ArrowLeft className="size-4" />
         Voltar

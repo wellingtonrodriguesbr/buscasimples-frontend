@@ -15,7 +15,7 @@ export function Filters() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="w-full md:w-fit gap-2" variant="secondary">
+        <Button variant="secondary" className="w-full md:w-fit">
           <Filter className="size-4" />
           Adicionar filtros
         </Button>

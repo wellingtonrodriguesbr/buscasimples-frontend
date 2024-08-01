@@ -80,12 +80,16 @@ export function Footer() {
 
 const column1 = [
   {
+    title: "Apoie este projeto",
+    url: "/ajuda",
+  },
+  {
     title: "Como funciona",
-    url: "/",
+    url: "/como-funciona",
   },
   {
     title: "Sugestões",
-    url: "/",
+    url: "https://api.whatsapp.com/send?phone=+5511950537096&text=Olá,%20quero%20dar%20algumas%20sugestões",
   },
   {
     title: "Dúvidas",

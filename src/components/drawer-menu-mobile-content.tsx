@@ -15,7 +15,7 @@ export function DrawerMenuMobileContent() {
           >
             Apoie este projeto
             <span className="text-xs mt-1 font-normal">
-              Precisamos da sua ajuda
+              Precisamos da sua ajuda para manter este projeto no ar
             </span>
           </Link>
           <ArrowUpRight className="absolute top-2 right-2 size-4 text-app-blue-400" />
