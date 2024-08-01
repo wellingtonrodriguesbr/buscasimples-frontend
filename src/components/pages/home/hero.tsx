@@ -20,8 +20,7 @@ export function Hero() {
         <TypeWriter words={["Buscou, achou, contratou. Simples assim!"]} />
 
         <h1 className="text-4xl xl:text-5xl leading-tight xl:leading-tight font-semibold">
-          Conectando clientes e profissionais de um jeito simples, rápido e
-          eficaz.
+          Conectando clientes e profissionais de um jeito descomplicado.
         </h1>
         <p className="text-sm md:text-base mt-6 text-app-gray-600">
           Simplificamos a maneira como profissionais e clientes se conectam.

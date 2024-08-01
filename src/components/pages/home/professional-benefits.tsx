@@ -24,7 +24,7 @@ export function ProfessionalBenefits() {
         <p className="text-sm max-w-md text-app-gray-600">
           O boca a boca tem seu valor, mas aqui você não se limita, muitos
           clientes precisam do seu trabalho e não te conhecem. Torne-se um
-          profissa do Busca Simples.
+          profissa do Busca Simples gratuitamente.
         </p>
       </div>
 
@@ -32,10 +32,10 @@ export function ProfessionalBenefits() {
         <div className="flex flex-col justify-end gap-2 h-[380px] xl:min-h-48 xl:h-full bg-professional bg-cover bg-center p-4 rounded-md relative md:sticky xl:relative md:top-60 xl:top-0">
           <Button asChild>
             <Link
-              href="/profissional/cadastro"
-              className="justify-between pointer-events-none"
+              href="/cadastro/profissional"
+              className="justify-between group"
             >
-              Quero ser um profissa (em breve)
+              Quero ser um profissa
               <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>
           </Button>
