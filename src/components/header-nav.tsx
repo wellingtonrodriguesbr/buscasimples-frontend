@@ -10,6 +10,7 @@ import { Loader2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { useUserAuthenticate } from "@/hooks/use-user-authenticate";
 import { AccountMenuDropdown } from "./account-menu-dropdown";
+import { IpadMenuDropdown } from "./ipad-menu-dropdown";
 
 const UserLocation = dynamic(() => import("./user-location-dialog"), {
   loading: () => {
@@ -48,7 +49,7 @@ export function HeaderNav() {
         {authenticate ? (
           <AccountMenuDropdown />
         ) : (
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden xl:flex items-center gap-4">
             <Button variant="link" asChild>
               <Link href="/entrar">Entrar</Link>
             </Button>
@@ -59,6 +60,7 @@ export function HeaderNav() {
             </Button>
           </div>
         )}
+        {!authenticate ? <IpadMenuDropdown /> : null}
       </div>
     </nav>
   );

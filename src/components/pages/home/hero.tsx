@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section
       data-authenticate={authenticate}
-      className="w-full max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 place-content-center gap-12 mt-12 md:mt-48 xl:mt-72 data-[authenticate=true]:hidden"
+      className="w-full max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 place-content-center gap-12 md:gap-16 xl:gap-12 mt-12 md:mt-48 xl:mt-72 data-[authenticate=true]:hidden"
     >
       <div className="mt-0 md:-mt-32">
         <TypeWriter words={["Buscou, achou, contratou. Simples assim!"]} />

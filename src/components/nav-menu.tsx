@@ -10,6 +10,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
+import { Heart } from "lucide-react";
 
 export function NavMenu() {
   const path = usePathname();
@@ -39,16 +40,17 @@ export function NavMenu() {
           </Link>
         </NavigationMenuItem>
 
-        {/* <NavigationMenuItem>
-          <Link href="/como-funciona" legacyBehavior passHref>
+        <NavigationMenuItem>
+          <Link href="/ajuda" legacyBehavior passHref>
             <NavigationMenuLink
-              data-active={path === "/como-funciona"}
+              data-active={path === "/ajuda"}
               className={navigationMenuTriggerStyle()}
             >
-              Como funciona
+              <Heart className="size-4 mr-2 group-data-[active=true]:fill-app-blue-400 group-data-[active=true]:stroke-none" />
+              Apoie este projeto
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem> */}
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
