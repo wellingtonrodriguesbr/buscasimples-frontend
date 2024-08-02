@@ -1,5 +1,9 @@
+import { Sectors } from "@/components/pages/sectors";
+
 export default function SectorsPage() {
-  <main>
-    <h1>Todos os setores</h1>
-  </main>;
+  return (
+    <main>
+      <Sectors />
+    </main>
+  );
 }
