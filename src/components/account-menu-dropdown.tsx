@@ -82,6 +82,15 @@ export function AccountMenuDropdown() {
             Minha conta
           </Link>
         </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link
+            href="/minha-conta/profissional"
+            className="w-full flex items-center gap-2 cursor-pointer"
+          >
+            <User className="size-4" />
+            Quero ser um profissa
+          </Link>
+        </DropdownMenuItem>
         <DropdownMenuItem
           className="text-rose-500 cursor-pointer hover:text-rose-500 focus:text-rose-500 hover:bg-rose-50 focus:bg-rose-50"
           asChild

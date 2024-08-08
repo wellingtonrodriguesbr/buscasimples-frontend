@@ -19,6 +19,8 @@ import { toast } from "sonner";
 import { z } from "zod";
 import { useGetUserProfile } from "@/hooks/use-get-user-profile";
 import { Textarea } from "@/components/ui/textarea";
+import { SelectSector } from "./select-sector";
+import { SelectOccupation } from "./select-occupation";
 
 const myProfessionalAccountFormSchema = z.object({
   zipCode: z.string().min(8, { message: "Digite um CEP válido" }),
@@ -26,6 +28,8 @@ const myProfessionalAccountFormSchema = z.object({
     .string()
     .min(2, { message: "Este campo é obrigatório" })
     .max(300, { message: "Precisa ter no máximo até 300 caracteres" }),
+  sector: z.string().min(2, { message: "Selecione seu setor de atuação" }),
+  occupation: z.string().min(2, { message: "Selecione sua profissão" }),
 });
 
 type MyProfessionalAccountFormSchema = z.infer<
@@ -34,12 +38,13 @@ type MyProfessionalAccountFormSchema = z.infer<
 
 export function MyProfessionalAccountForm() {
   const { user, isGetUserProfilePending } = useGetUserProfile();
-
   const form = useForm<MyProfessionalAccountFormSchema>({
     resolver: zodResolver(myProfessionalAccountFormSchema),
     defaultValues: {
       zipCode: "",
       about: "",
+      sector: "",
+      occupation: "",
     },
   });
 
@@ -67,6 +72,7 @@ export function MyProfessionalAccountForm() {
       }
     }
   }
+
   return (
     <Form {...form}>
       {isGetUserProfilePending ? (
@@ -90,7 +96,7 @@ export function MyProfessionalAccountForm() {
         </fieldset>
       ) : (
         <form
-          className="w-full flex flex-col gap-3 mt-6"
+          className="w-full flex flex-col gap-4 mt-6"
           onSubmit={form.handleSubmit(onSubmit)}
         >
           <FormField
@@ -120,6 +126,30 @@ export function MyProfessionalAccountForm() {
                     {...field}
                   />
                 </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="sector"
+            render={({ field }) => (
+              <FormItem className="flex flex-col gap-1 my-2">
+                <FormLabel>Setor de atuação</FormLabel>
+                <SelectSector field={field} />
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="occupation"
+            render={({ field }) => (
+              <FormItem className="flex flex-col gap-1">
+                <FormLabel>Sua profissão</FormLabel>
+                <SelectOccupation field={field} />
                 <FormMessage />
               </FormItem>
             )}
