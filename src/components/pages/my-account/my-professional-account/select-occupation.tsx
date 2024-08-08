@@ -39,6 +39,7 @@ export function SelectOccupation({ field }: SelectSectorProps) {
       <PopoverTrigger asChild>
         <FormControl>
           <Button
+            disabled={!occupations.length}
             variant="secondary"
             role="combobox"
             className={cn(

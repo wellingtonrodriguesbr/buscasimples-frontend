@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Skeleton } from "@/components/ui/skeleton";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AxiosError } from "axios";
 import { Loader2 } from "lucide-react";
@@ -21,6 +20,7 @@ import { useGetUserProfile } from "@/hooks/use-get-user-profile";
 import { Textarea } from "@/components/ui/textarea";
 import { SelectSector } from "./select-sector";
 import { SelectOccupation } from "./select-occupation";
+import { ProfessionalProfileLoading } from "@/components/loaders/professional-profile-loading";
 
 const myProfessionalAccountFormSchema = z.object({
   zipCode: z.string().min(8, { message: "Digite um CEP válido" }),
@@ -76,24 +76,7 @@ export function MyProfessionalAccountForm() {
   return (
     <Form {...form}>
       {isGetUserProfilePending ? (
-        <fieldset className="flex flex-col gap-6 mt-6">
-          <div className="flex flex-col gap-3">
-            <Skeleton className="w-24 h-5" />
-            <Skeleton className="w-full h-9" />
-          </div>
-          <div className="flex flex-col gap-3">
-            <Skeleton className="w-24 h-5" />
-            <Skeleton className="w-full h-9" />
-          </div>
-          <div className="flex flex-col gap-3">
-            <Skeleton className="w-24 h-5" />
-            <Skeleton className="w-full h-9" />
-          </div>
-          <div className="flex gap-2 mt-2">
-            <Skeleton className="w-28 h-9" />
-            <Skeleton className="w-full h-9" />
-          </div>
-        </fieldset>
+        <ProfessionalProfileLoading />
       ) : (
         <form
           className="w-full flex flex-col gap-4 mt-6"
