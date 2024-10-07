@@ -24,7 +24,7 @@ export function AccountMenuDropdown() {
   async function handleSignOut() {
     try {
       await signOut();
-      window.location.reload();
+      window.location.href = `${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN_URL}/entrar`
     } catch (error) {
       console.log(error);
     }
