@@ -16,7 +16,7 @@ export function useAuth() {
   const redirectLink = searchParams.get("redirect");
 
   const { isPending: isAuthPending } = useQuery({
-    queryKey: [""],
+    queryKey: ["validate-auth"],
     queryFn: handleAuth,
     enabled: !!code,
   });
