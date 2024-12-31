@@ -47,7 +47,7 @@ const ITEMS = [
     link: "https://api.whatsapp.com/send?phone=+5511950537096&text=Olá,%20estou%20com%20algumas%20dúvidas,%20pode%20me%20ajudar?",
   },
   {
-    title: "Gostaria de dar um feedback",
-    link: "https://api.whatsapp.com/send?phone=+5511950537096&text=Olá,%20gostaria%20de%20dar%20um%20feedback",
+    title: "Gostaria de saber como funciona",
+    link: "/como-funciona",
   },
 ];
