@@ -97,7 +97,7 @@ export function ForThoseWhoWantToHire() {
             discutir todos os detalhes, como preço, prazo e expectativas.
           </li>
           <li className="text-sm md:text-base">
-            <strong>3. Prefira Meios Seguros de Pagamento:</strong> Combine
+            <strong>3. Prefira meios seguros de pagamento:</strong> Combine
             previamente a forma de pagamento que garanta segurança para ambas as
             partes.
           </li>
