@@ -8,10 +8,10 @@ import { ChevronDown, Clock } from "lucide-react";
 export function ProfessionalOfficeHour() {
   return (
     <Popover>
-      <PopoverTrigger className="flex items-center gap-2">
+      <PopoverTrigger className="flex items-center gap-2 group hover:text-app-gray-900 transition-colors">
         <Clock className="size-4" />
         Horário de atendimento
-        <ChevronDown className="size-3" />
+        <ChevronDown className="size-3 group-hover:translate-y-0.5 transition-transform" />
       </PopoverTrigger>
       <PopoverContent align="start">
         <div className="flex flex-col gap-6">

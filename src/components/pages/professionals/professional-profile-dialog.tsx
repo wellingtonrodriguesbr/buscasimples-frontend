@@ -17,10 +17,10 @@ export function ProfessionalProfileDialog() {
       <DialogTrigger asChild>
         <Button
           size="sm"
-          className="bg-transparent hover:bg-transparent p-0 flex items-center text-app-blue-400 hover:text-app-blue-500 text-xs group"
+          className="bg-transparent hover:bg-transparent p-0 gap-1 text-app-blue-400 hover:text-app-blue-500 text-xs group"
         >
           Ver perfil completo
-          <ChevronRight className="text-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+          <ChevronRight className="size-3 group-hover:translate-x-0.5 transition-transform" />
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-[350px] md:max-w-lg rounded-md">
