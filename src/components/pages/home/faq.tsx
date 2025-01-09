@@ -50,7 +50,7 @@ export function Faq() {
             <AccordionContent>
               Nossa missão aqui é ser uma vitrine para profissionais, onde os
               profissionais podem divulgar seus serviços e encontrar novos
-              clientes.{" "}
+              clientes. E clientes podem encontrar profissionais adequados.{" "}
               <Link
                 href="/como-funciona"
                 className="text-app-blue-500 hover:text-app-blue-600 hover:underline"
@@ -65,9 +65,9 @@ export function Faq() {
               O que é um(a) profissa?
             </AccordionTrigger>
             <AccordionContent>
-              Todo profissional aqui da plataforma nós apelidamos carinhosamente
-              de profissa. É um termo popular para se referir a uma pessoa que
-              realiza algum trabalho ou serviço.
+              Todo o profissional aqui da plataforma nós apelidamos
+              carinhosamente de profissa. É um termo popular para se referir a
+              uma pessoa que realiza algum trabalho ou serviço.
             </AccordionContent>
           </AccordionItem>
 
@@ -110,13 +110,12 @@ export function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-6">
-            <AccordionTrigger className="underline-0 hover:no-underline">
+            <AccordionTrigger className="text-left mr-2 underline-0 hover:no-underline">
               Quero ser um profissa, preciso pagar alguma coisa?
             </AccordionTrigger>
             <AccordionContent>
               Não! A plataforma é totalmente gratuita para todos os
-              profissionais que queiram se cadastrar e começar a ser encontrado
-              por clientes.
+              profissionais que queiram se cadastrar.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
