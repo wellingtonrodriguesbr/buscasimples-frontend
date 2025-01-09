@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { TypeWriter } from "./typewriter";
+import { TypeWriter } from "@/components/pages/home/typewriter";
 import { useUserAuthenticate } from "@/hooks/use-user-authenticate";
 
 export function Hero() {
@@ -22,9 +22,10 @@ export function Hero() {
           Conectando clientes e profissionais de um jeito descomplicado.
         </h1>
         <p className="text-sm md:text-base mt-6 text-app-gray-600">
-          Simplificamos a maneira como profissionais e clientes se conectam.
-          Encontre especialistas em diversas áreas prontos para te atender.
-          Encontre clientes que estão procurando seus serviços. Simples assim!
+          Somos uma plataforma independente que conecta quem precisa com quem
+          sabe fazer. Quer encontrar especialistas prontos pra resolver o que
+          você precisa? Ou tá buscando clientes que querem o seu serviço? Aqui é
+          o lugar! Tudo prático, direto e feito pra simplificar sua vida.
         </p>
 
         <div className="flex flex-col md:flex-row items-center gap-3 mt-8">

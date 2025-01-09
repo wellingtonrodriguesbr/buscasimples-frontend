@@ -42,10 +42,15 @@ export function BannerCarousel() {
       className="w-full max-w-screen-xl mx-auto px-4 mt-24 data-[authenticate=true]:mt-8"
     >
       {authenticate ? <WelcomeMessage /> : null}
-
-      <h2 className="font-medium text-2xl md:text-3xl mb-6">
-        O que você está buscando hoje?
-      </h2>
+      <div className="flex flex-col md:flex-row items-start gap-4 justify-between md:sticky xl:relative top-20 xl:top-0 bg-app-gray-50 pt-6 z-10 xl:z-auto mb-4 md:mb-12">
+        <h2 className="font-medium text-2xl md:text-3xl">
+          O que você está buscando hoje?
+        </h2>
+        <p className="text-sm max-w-md text-app-gray-600">
+          Encontre o profissional ideal para o que você precisa em poucos
+          cliques, de forma rápida, prática e sem complicação! 😉
+        </p>
+      </div>
       <Carousel
         plugins={[
           Autoplay({

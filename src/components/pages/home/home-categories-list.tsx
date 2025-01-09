@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/carousel";
 import { LayoutGrid } from "lucide-react";
 
-export function Sectors() {
+export function HomeCategoriesList() {
   return (
     <section className="mt-12 mx-auto w-full xl:max-w-screen-xl xl:px-4 overflow-x-hidden">
       <Carousel
@@ -17,7 +17,7 @@ export function Sectors() {
         }}
         className="w-full mt-4 md:mt-8"
       >
-        <CarouselContent className="w-fulllex justify-start xl:justify-center ml-4 xl:ml-0 gap-2 md:gap-3">
+        <CarouselContent className="w-full justify-start xl:justify-center ml-4 xl:ml-0 gap-2 md:gap-3">
           {Array.from({ length: 10 }).map((_, index) => (
             <CarouselItem key={index} className="basis-auto w-fit pl-0">
               <Link
@@ -33,7 +33,7 @@ export function Sectors() {
           ))}
           <CarouselItem className="basis-auto pl-0 mr-4 xl:mr-0 w-fit">
             <Link
-              href="/setores"
+              href="/categorias"
               className="flex flex-col items-center gap-2 group"
             >
               <div className="flex items-center justify-center size-24 rounded-lg bg-app-blue-400/5 group-hover:bg-app-blue-400 transition-colors">

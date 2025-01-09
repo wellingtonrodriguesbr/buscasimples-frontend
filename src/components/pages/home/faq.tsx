@@ -48,52 +48,75 @@ export function Faq() {
               Como irá funcionar?
             </AccordionTrigger>
             <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-5">
-            <AccordionTrigger className="underline-0 hover:no-underline">
-              O que é um(a) profissa?
-            </AccordionTrigger>
-            <AccordionContent>
-              Yes. It&apos;s animated by default, but you can disable it if you
-              prefer.
+              Nossa missão aqui é ser uma vitrine para profissionais, onde os
+              profissionais podem divulgar seus serviços e encontrar novos
+              clientes.{" "}
+              <Link
+                href="/como-funciona"
+                className="text-app-blue-500 hover:text-app-blue-600 hover:underline"
+              >
+                Aqui você verá com mais detalhes
+              </Link>
+              .
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger className="underline-0 hover:no-underline">
-              É uma assinatura?
+              O que é um(a) profissa?
             </AccordionTrigger>
             <AccordionContent>
-              Yes. It comes with default styles that matches the other
-              components&apos; aesthetic.
+              Todo profissional aqui da plataforma nós apelidamos carinhosamente
+              de profissa. É um termo popular para se referir a uma pessoa que
+              realiza algum trabalho ou serviço.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-4">
+
+          <AccordionItem value="item-3">
             <AccordionTrigger className="underline-0 hover:no-underline">
               Quem poderá entrar como profissa?
             </AccordionTrigger>
             <AccordionContent>
-              Yes. It&apos;s animated by default, but you can disable it if you
-              prefer.
+              Qualquer pessoa que seja capaz de desenvolver um trabalho ou
+              serviço.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3">
+          <AccordionItem value="item-4">
             <AccordionTrigger className="text-left mr-2 no-underline hover:no-underline">
-              Quais benefícios eu terei como um profissa?
+              A plataforma garante que o serviço seja cumprido pelo
+              profissional?
             </AccordionTrigger>
             <AccordionContent>
-              Yes. It&apos;s animated by default, but you can disable it if you
-              prefer.
+              Não! Não interferimos na negociação entre profissionais e
+              clientes, tudo acontece diretamente entre eles.{" "}
+              <Link
+                href="/como-funciona"
+                className="text-app-blue-500 hover:text-app-blue-600 hover:underline"
+              >
+                Aqui você verá com mais detalhes e com dicas de como contratar
+                com segurança
+              </Link>
+              .
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-6">
+          <AccordionItem value="item-5">
             <AccordionTrigger className="text-left mr-2 underline-0 hover:no-underline">
               Quero contratar um profissa, preciso pagar alguma coisa?
             </AccordionTrigger>
             <AccordionContent>
-              Yes. It&apos;s animated by default, but you can disable it if you
-              prefer.
+              Não! Nossa missão é conectar você a um profissional capacitado de
+              forma simples, prática e gratuita. Porém, a negociação dos valores
+              do serviço que ele irá prestar a você, será feita diretamente com
+              o profissional.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-6">
+            <AccordionTrigger className="underline-0 hover:no-underline">
+              Quero ser um profissa, preciso pagar alguma coisa?
+            </AccordionTrigger>
+            <AccordionContent>
+              Não! A plataforma é totalmente gratuita para todos os
+              profissionais que queiram se cadastrar e começar a ser encontrado
+              por clientes.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

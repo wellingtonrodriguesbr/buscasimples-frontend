@@ -1,16 +1,16 @@
 import Link from "next/link";
 
 import {
-  ArrowUpRight,
   Award,
   BadgeCheck,
-  BarChart2,
   ChevronRight,
   DollarSign,
   Handshake,
   Percent,
+  Plus,
   Rss,
   UnfoldHorizontal,
+  User,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -22,9 +22,12 @@ export function ProfessionalBenefits() {
           Veja ao que você terá acesso sendo um Profissa na nossa plataforma
         </h3>
         <p className="text-sm max-w-md text-app-gray-600">
-          O boca a boca tem seu valor, mas aqui você não se limita, muitos
-          clientes precisam do seu trabalho e não te conhecem. Torne-se um
-          profissa do Busca Simples gratuitamente.
+          O boca a boca é valioso, mas por que se limitar quando o mundo precisa
+          do que você faz? Imagine centenas de clientes procurando exatamente o
+          seu talento e não sabendo onde te encontrar. É hora de mudar isso!
+          Torne-se um verdadeiro profissional de destaque no Busca Simples,
+          conecte-se com mais pessoas e transforme sua paixão em oportunidade —
+          e o melhor, sem pagar nada por isso!
         </p>
       </div>
 
@@ -60,15 +63,12 @@ export function ProfessionalBenefits() {
               </span>
             </div>
           ))}
-          <Link
-            href="/como-funciona"
-            className="flex items-center justify-center w-full h-48 md:h-full bg-app-green-500 hover:bg-app-green-600 transition-colors rounded-md relative group"
-          >
+          <Button className="flex items-center justify-center w-full h-full bg-app-green-500 hover:bg-app-green-600 transition-colors rounded-md relative group">
             <span className="text-white font-medium text-lg md:text-xl px-3 text-center">
-              Ver mais detalhes
+              E muito mais...
             </span>
-            <ArrowUpRight className="w-6 h-6 absolute top-4 right-4 text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </Link>
+            <Plus className="w-6 h-6 absolute top-4 right-4 text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </Button>
         </div>
       </div>
     </section>
@@ -79,36 +79,44 @@ const benefits = [
   {
     icon: <DollarSign className="w-4 h-4" />,
     title: "100% gratuito e sempre será",
-    description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    description:
+      "Utilize todas as funcionalidades sem pagar nada, garantindo acesso completo sem custos ocultos.",
   },
   {
-    icon: <BarChart2 className="w-4 h-4" />,
-    title: "Tenha um painel profissional",
-    description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    icon: <User className="w-4 h-4" />,
+    title: "Tenha um perfil exclusivo",
+    description:
+      "Destaque-se com um perfil personalizado e acompanhe seus resultados em uma plataforma prática e fácil de usar.",
   },
   {
     icon: <Handshake className="w-4 h-4" />,
     title: "Alcance mais clientes",
-    description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    description:
+      "Amplie sua base de clientes com ferramentas que aumentam sua visibilidade e engajamento.",
   },
   {
     icon: <Percent className="w-4 h-4" />,
-    title: "Seja mais valorizado",
-    description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    title: "Encontre o cliente ideal",
+    description:
+      "Destaque-se no mercado e conquiste a preferência dos seus clientes.",
   },
   {
     icon: <Award className="w-4 h-4" />,
-    title: "Acumule pontos e troque por brindes",
-    description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    title: "Acumule pontos e seja recomendado",
+    description:
+      "Conquiste destaque e confiança ao acumular pontos e obter indicações para novos clientes.",
   },
+
   {
     icon: <Rss className="w-4 h-4" />,
     title: "Seja digital, na era digital",
-    description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    description:
+      "Transforme seu negócio com ferramentas digitais feitas para o presente e o futuro.",
   },
   {
     icon: <UnfoldHorizontal className="w-4 h-4" />,
     title: "Expanda seus horizontes",
-    description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    description:
+      "Explore novas oportunidades e alcance novos mercados com facilidade.",
   },
 ];

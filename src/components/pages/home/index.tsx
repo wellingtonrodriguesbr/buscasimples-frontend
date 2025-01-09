@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/pages/home/hero";
 import { ProfessionalBenefits } from "@/components/pages/home/professional-benefits";
-import { Sectors } from "./sectors";
+import { HomeCategoriesList } from "@/components/pages/home/home-categories-list";
 
 export function Home() {
   return (
@@ -12,7 +12,7 @@ export function Home() {
       <Header />
       <Hero />
       <BannerCarousel />
-      <Sectors />
+      <HomeCategoriesList />
       <ProfessionalBenefits />
       <Faq />
       <Footer />
