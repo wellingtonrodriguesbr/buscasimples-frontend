@@ -50,8 +50,7 @@ export function Hero() {
           width={800}
           height={800}
           quality={100}
-          placeholder="blur"
-          blurDataURL="/hero-img.svg"
+          priority
         />
       </div>
     </section>
